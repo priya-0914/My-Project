@@ -1,0 +1,246 @@
+.about {
+    min-height: 100vh;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, #2c2c54 0%, #1a1a3a 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Mission & Vision Combined */
+.mission-vision-section {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.mission-card, .vision-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.mission-card {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe0b3 100%);
+}
+
+.vision-card {
+    background: linear-gradient(135deg, #e6f3ff 0%, #b3d9ff 100%);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.mission-card h2, .vision-card h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.mission-card p, .vision-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Compact Values */
+.values-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.values-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.value-item h4 {
+    color: #333;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.value-item p {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Simple Process */
+.process-section {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.process-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    text-align: center;
+    min-width: 120px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #ffa500;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 0.5rem;
+    font-size: 1.2rem;
+}
+
+.process-step h4 {
+    color: #333;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.process-step p {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.step-arrow {
+    color: #ffa500;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Quick Stats */
+.stats-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #2c2c54 0%, #1a1a3a 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    text-align: center;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: #ffa500;
+    margin-bottom: 0.25rem;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-flow {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .values-compact {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 2rem 0;
+    }
+    
+    .mission-vision-section,
+    .values-section,
+    .process-section,
+    .stats-section {
+        padding: 2rem 0;
+    }
+    
+    .mission-card,
+    .vision-card,
+    .value-item {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
